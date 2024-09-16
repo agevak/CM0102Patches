@@ -18,20 +18,19 @@ Benchmarking was done via CM Tactics Benchmark tool using the save file bundled 
 Most important part ot the tactics here is using man marking for DCs. Each test simulated 100 seasons and aggregated their results.
 In each test the Marking intrinsics of all the DC players of PAS Giannina have been edited to 0, 60 and 120.
 
-The results are:
-Name	For	Against	Points
-dc_marking_0_orig	52.29	29.61	51.04
-dc_marking_60_orig	51.31;23.61;56.15
-dc_marking_120_orig	52.79;33.72;49.09
-dc_marking_120_cap75;51.99;32.47;49.49
-dc_marking_60_cap75;51.4625;23.275;55.825
-dc_marking_0_cap75;52.28;28.36;52.49;26
-dc_marking_0_cap75repatch;50.87;28.55;51.45
-dc_marking_60_cap75repatch;50.52;22.84;56.07
-dc_marking_120_cap75repatch;51.11;21.85;57.43
-dc_marking_120_removemegaboost;48.07;21.93;55.66
-dc_marking_60_removemegaboost;48.47;23.39;54.37
-dc_marking_0_removemegaboost;49.01;26.31;51.75
-
+The results are (averages over 100 seasons):
+Name                             For    Against Points Comment
+dc_marking_0_orig                52.29	29.61	51.04
+dc_marking_60_orig               51.31  23.61   56.15
+dc_marking_120_orig              52.79  33.72   49.09  Conceded more goals than with much worse attribute. It's the outcome of integer overflow.
+dc_marking_0_cap75               52.28  28.36   52.49
+dc_marking_60_cap75              51.46  23.28   55.83
+dc_marking_120_cap75             51.99  32.47   49.49  Conceded more goals than with much worse attribute. It proves that integer overflow was not properly fixed.
+dc_marking_0_cap75repatch        50.87  28.55   51.45
+dc_marking_60_cap75repatch       50.52  22.84   56.07
+dc_marking_120_cap75repatch      51.11  21.85   57.43  Conceded fewer goals than with worse attribute. It indicates that integer overflow has been fixed.
+dc_marking_0_removemegaboost     49.01  26.31   51.75
+dc_marking_60_removemegaboost    48.47  23.39   54.37
+dc_marking_120_removemegaboost   48.07  21.93   55.66  The better the attribute - the less conceded goals. It proves that there is no bug.
 
 Tactics and benchmark results are uploaded here.
