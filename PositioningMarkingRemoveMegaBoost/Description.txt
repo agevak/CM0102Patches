@@ -37,3 +37,5 @@ dc_mark_0_pos_60_removemegaboost  50.42  21.43   57.25
 dc_mark_0_pos_120_removemegaboost 50.56  20.04   58.07  Similar bug-free proof for Positioning attribute.
 
 Tactics and benchmark results are uploaded here.
+
+Patch can be applied either on original game or on MarkingAndPositioningClampTo75 patch.
